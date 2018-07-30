@@ -16,13 +16,22 @@
         "stage-0"
     ],
     "plugins": [
+        ["syntax-dynamic-import"],
+        [
+            "import",
+            {
+                "libraryName": "element-ui",
+                "libraryDirectory": "lib",
+                "style": true
+            }
+        ],
         [
 			"component",
 			{
 				"libraryName": "element-ui",
 				"styleLibraryName": "theme-chalk"
 			}
-		],	  
+		],
         [
             "transform-runtime",
             {

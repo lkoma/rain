@@ -7,9 +7,17 @@ export default new Router({
     mode: 'history',
     routes: [
         {
-            path: '/demo',
-            name: 'demo',
-            component: () => import(/* webpackChunkName: "demo-view" */ '@views/demo/Index')
+            path: '/',
+            name: 'Base',
+            component: () => import(/* webpackChunkName: "base-view" */ '@views/index'),
+            redirect: { name: 'Demo' },
+            children: [
+                {
+                    path: '/demo',
+                    name: 'Demo',
+                    component: () => import(/* webpackChunkName: "demo-view" */ '@views/demo/index')
+                }
+            ]
         }
     ]
 });

@@ -1,7 +1,6 @@
 <template>
    <div>
-       来了....
-       <img src="@src/assets/images/17009.jpg" alt="">
+       测试....
    </div>
 </template>
 
@@ -22,6 +21,4 @@ export default {
 };
 </script>
 <style lang="stylus" scoped>
-img
-    size 100%
 </style>

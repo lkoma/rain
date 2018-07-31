@@ -55,6 +55,7 @@ const webpackConfig = merge(baseWebpackConfig, {
             inject: true,
             jsPath: '/js/',
             favicon: './favicon.ico',
+            title: '文物加后台管理系统',
             minify: {
                 removeComments: true,
                 collapseWhitespace: true,

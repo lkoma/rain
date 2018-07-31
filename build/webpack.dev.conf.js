@@ -11,7 +11,6 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 const portfinder = require('portfinder');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const PrerenderSpaPlugin = require('prerender-spa-plugin');
 
 function resolve(dir) {
     return path.join(__dirname, '..', dir);
@@ -42,6 +41,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             template: 'index.html',
             inject: true,
             favicon: './favicon.ico',
+            title: '文物加后台管理系统',
             minify: {
                 removeComments: true,
                 collapseWhitespace: true,
@@ -55,11 +55,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
                 to: config.dev.assetsSubDirectory,
                 ignore: ['.*']
             }
-        ]),
-        new PrerenderSpaPlugin({
-            staticDir: path.join(__dirname, '../dist'),
-            routes: ['/demo']
-        })
+        ])
     ]
 });
 /* eslint-disable no-shadow */
